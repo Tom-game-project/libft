@@ -1,19 +1,40 @@
 # libft
 
-- [tester1](https://github.com/Tripouille/libftTester)
+## テストの方法
 
-- [tester2](https://github.com/alelievr/libft-unit-test)
+- 自作テスト
 
-- [tester3](https://github.com/usatie/libft-tester-tokyo)
+  test.c
 
-## Part 1
+- 公開されているテスト
 
-- strlcpy
-  - 本家がnull文字を入れるか入れないかで挙動を変える(内部でnull文字で文字列の長さを判別している可能性がある)
+  - [libftTester](https://github.com/Tripouille/libftTester)
+    ```sh
+    git submodule update --remote --init libftTester
+    ``` 
 
+    ```sh
+    cd libftTester
+    make
+    ```
+  - [libft-unit-test](https://github.com/alelievr/libft-unit-test)
+    ```sh
+    git submodule update --remote --init libft-unit-test
+    cd libft-unit-test
+    make
+    ```
 
-## Part 2
+    Makefileに適切なパスを設定する
 
-### TODO
-  - 細かい仕様の確認 NULLの返却などなど
+    ```diff
+    - LIBFTDIR	=	../libft
+    + LIBFTDIR	=	../
+    ```
 
+  - [libft-tester-tokyo](https://github.com/usatie/libft-tester-tokyo)
+    ```sh
+    git submodule update --remote --init libft-tester-tokyo
+    cd libft-tester-tokyo
+    make
+    make bonus
+    ```
