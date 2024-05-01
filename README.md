@@ -18,7 +18,7 @@
     make
     ```
 
-    Makefileでgit pullが使用されているがremoteの設定を変更する必要がある
+    Makefileで`git pull`が使用されているのでremoteの設定を変更する必要がある
 
     ```patch
     update:
