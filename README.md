@@ -17,6 +17,15 @@
     cd libftTester
     make
     ```
+
+    Makefileでgit pullが使用されているがremoteの設定を変更する必要がある
+
+    ```patch
+    update:
+    - @git pull
+    + @git pull origin heads/master
+    ```
+
   - [libft-unit-test](https://github.com/alelievr/libft-unit-test)
     ```sh
     git submodule update --remote --init libft-unit-test
@@ -26,7 +35,7 @@
 
     Makefileに適切なパスを設定する
 
-    ```diff
+    ```patch
     - LIBFTDIR	=	../libft
     + LIBFTDIR	=	../
     ```
